@@ -1,0 +1,36 @@
+{
+  "name": "simple-auth",
+  "version": "1.0.0",
+  "description": "Simple auth app using MEVN stack",
+  "main": "app.js",
+  "scripts": {
+    "backend": "nodemon app.js",
+    "frontend": "npm run serve --prefix ../frontend",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "build": "npm install --prefix ../frontend/ && npm run build --prefix ../frontend/"
+  },
+  "keywords": [
+    "MongoDB",
+    "Express.js",
+    "Vue.js",
+    "Node.js",
+    "JWT"
+  ],
+  "author": "Petr Chatrný",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.2",
+    "nodemon": "^2.0.18"
+  },
+  "license": "ISC"
+}
