@@ -19,6 +19,10 @@ mongoose.connect(process.env.DB_URI, {useNewUrlParser: true, useUnifiedTopology:
     .then(() => console.log("INFO - MongoDB connected successfully."))
     .catch((err) => console.log(`ERROR - MongoDB not connected : ${err} `));
 
+// register routes
+const apiRoutes = require("./routes");
+app.use("/api", apiRoutes)
+
 // run server
 const port = process.env.PORT || 3000
 app.listen(port, () => {
