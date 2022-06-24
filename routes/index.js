@@ -3,6 +3,7 @@ const User = require("../model/user");
 const jwt = require("jsonwebtoken");
 const {SECRET, MAX_AGE} = require("../consts")
 const Dragon = require("../model/dragon");
+const {requireLogin} = require("../middleware/authentication");
 
 const router = Router();
 
@@ -63,7 +64,7 @@ router.post("/users/logout", (req, res) => {
  * @desc Get authenticated user
  * @access Private
  */
-router.get("/users", (req, res) => {
+router.get("/users", requireLogin, (req, res) => {
     const token = req.cookies.auth;
     const _id = jwt.verify(token, SECRET).payload;
     User.findOne({_id}, {email: 1, registrationDate: 1})
@@ -81,7 +82,7 @@ router.get("/users", (req, res) => {
  * @desc Get dragons
  * @access Private
  */
-router.get("/dragons", (req, res) => {
+router.get("/dragons", requireLogin, (req, res) => {
     Dragon.find()
         .then(dragons => {
             return res.status(200).json({message: "success", data: dragons})
