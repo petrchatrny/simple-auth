@@ -8,7 +8,11 @@ const cookieParser = require('cookie-parser');
 const app = express();
 
 // middleware
-app.use(cors());
+if (process.env.NODE_ENV === "development") {
+    app.use(cors({origin: "http://localhost:8080", credentials: true}));
+} else {
+    app.use(cors());
+}
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
