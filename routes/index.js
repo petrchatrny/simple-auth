@@ -34,8 +34,12 @@ router.post("/users/register", (req, res) => {
  * @access Public
  */
 router.post("/users/login", (req, res) => {
-    User.find(req.body)
+    const {email, password} = req.body;
+    User.findOne({email: email, password: password})
         .then(user => {
+            if (!user) {
+                return res.status(401).json({message: "failed", error: "wrong-credentials"});
+            }
             const maxAge = 3 * 24 * 60 * 60
             const token = createJwt(user._id, maxAge);
             res.cookie("auth", token, {httpOnly: true, maxAge: maxAge * 10});
