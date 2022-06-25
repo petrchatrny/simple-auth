@@ -1,5 +1,5 @@
 <template>
-  <div class="body">
+  <div class="view-body">
     <img src="../assets/dragon.svg" alt="dragon">
     <div class="home-text">
       <h1>Website about epic dragons</h1>
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style scoped>
-.body {
+.view-body {
   margin: 25px;
   display: flex;
   flex-direction: row;

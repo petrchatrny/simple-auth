@@ -1,4 +1,10 @@
-form {
+.view-body {
+    margin: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.view-body form {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -10,17 +16,17 @@ form {
     margin-bottom: 20px;
 }
 
-label {
+.view-body label {
     font-size: 22px;
 }
 
-input {
+.view-body input {
     font-size: 18px;
     padding: 5px;
     width: 35%;
 }
 
-button {
+.form-button {
     width: 35%;
     padding: 8px;
     font-size: 18px;

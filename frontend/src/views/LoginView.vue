@@ -1,5 +1,5 @@
 <template>
-  <div class="body">
+  <div class="view-body">
     <h1>Login</h1>
     <form>
       <div class="form-part">
@@ -12,7 +12,7 @@
         <input type="password" id="password" placeholder="Password" required>
       </div>
 
-      <button>Login</button>
+      <button class="form-button">Login</button>
     </form>
   </div>
 </template>
@@ -25,11 +25,5 @@ export default {
 
 <style scoped>
 @import "../assets/form.css";
-
-.body {
-  margin: 35px;
-  display: flex;
-  flex-direction: column;
-}
 
 </style>

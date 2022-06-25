@@ -1,5 +1,5 @@
 <template>
-  <div class="body">
+  <div class="view-body">
     <h1>Register</h1>
     <form @submit.prevent="register">
       <div class="form-part">
@@ -17,7 +17,7 @@
         <input type="password" v-model="password" id="password" placeholder="Password" required>
       </div>
 
-      <button>Register</button>
+      <button class="form-button">Register</button>
     </form>
   </div>
 </template>
@@ -55,9 +55,6 @@ export default {
 </script>
 
 <style scoped>
-.body {
-  margin: 35px;
-  display: flex;
-  flex-direction: column;
-}
+@import "../assets/form.css";
+
 </style>
