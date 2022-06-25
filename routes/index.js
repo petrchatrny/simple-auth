@@ -17,12 +17,10 @@ const createJwt = (payload) => {
  * @access Private
  */
 router.post("/users/register", (req, res) => {
-    const {email, password} = req.body;
-    User.create({email, password})
-        .then(user => {
-            const token = createJwt(user._id);
-            res.cookie("auth", token, {httpOnly: true, maxAge: MAX_AGE * 10});
-            return res.status(200).json({message: "success", data: user})
+    const {username, email, password} = req.body;
+    User.create({username, email, password})
+        .then(() => {
+            return res.status(200).json({message: "success"})
         })
         .catch(error => {
             console.log(error);
