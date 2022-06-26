@@ -5,16 +5,17 @@
   "main": "app.js",
   "scripts": {
     "backend": "nodemon app.js",
-    "frontend": "npm run serve --prefix ../frontend",
+    "frontend": "npm run serve --prefix ./frontend",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "build": "npm install --prefix ../frontend/ && npm run build --prefix ../frontend/"
+    "build": "npm install --prefix ./frontend/ && npm run build --prefix ./frontend/"
   },
   "keywords": [
     "MongoDB",
     "Express.js",
     "Vue.js",
     "Node.js",
-    "JWT"
+    "JWT",
+    "Vuex"
   ],
   "author": "Petr Chatrný",
   "dependencies": {

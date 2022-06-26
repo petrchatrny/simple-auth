@@ -1,0 +1,98 @@
+{
+  "users": [
+    {
+      "_id": {
+        "$oid": "62b5bc2609f4b17f913c003e"
+      },
+      "email": "jaroslav.metelka@seznam.cz",
+      "password": "123456",
+      "registrationDate": {
+        "$date": {
+          "$numberLong": "1656077349947"
+        }
+      },
+      "username": "Jaroslav Metelka"
+    },
+    {
+      "_id": {
+        "$oid": "62b5bc2609f4b17f913c0040"
+      },
+      "email": "cervenacek@seznam.cz",
+      "password": "123456",
+      "registrationDate": {
+        "$date": {
+          "$numberLong": "1656077349947"
+        }
+      },
+      "username": "Červenáček"
+    },
+    {
+      "_id": {
+        "$oid": "62b5bc2609f4b17f913c0041"
+      },
+      "email": "rychlonozka@seznam.com",
+      "password": "123456",
+      "registrationDate": {
+        "$date": {
+          "$numberLong": "1656077349947"
+        }
+      },
+      "username": "Rychlonožka"
+    },
+    {
+      "_id": {
+        "$oid": "62b5bc2609f4b17f913c003d"
+      },
+      "email": "mirek.dusin@seznam.cz",
+      "password": "123456",
+      "registrationDate": {
+        "$date": {
+          "$numberLong": "1656077349947"
+        }
+      },
+      "username": "Mirek Dušín"
+    },
+    {
+      "_id": {
+        "$oid": "62b5bc2609f4b17f913c003f"
+      },
+      "email": "jindrich.hojer@seznam.cz",
+      "password": "123456",
+      "registrationDate": {
+        "$date": {
+          "$numberLong": "1656077349947"
+        }
+      },
+      "username": "Jindra Hojer"
+    }
+  ],
+  "dragons": [
+    {
+      "_id": {
+        "$oid": "62b5bbc8cc2ea485a5a9ce10"
+      },
+      "name": "Deathwing",
+      "image": "https://static.wikia.nocookie.net/wowwiki/images/1/10/Earthwarder.png",
+      "damage": 12,
+      "health": 12
+    },
+    {
+      "_id": {
+        "$oid": "62b5bbc8cc2ea485a5a9ce0f"
+      },
+      "name": "Ysera",
+      "image": "https://static.wikia.nocookie.net/wowpedia/images/1/16/Ysera_of_the_Night_Fae.jpg",
+      "damage": 4,
+      "health": 12
+    },
+    {
+      "_id": {
+        "$oid": "62b5bbc8cc2ea485a5a9ce11"
+      },
+      "name": "Alexstrasza",
+      "image": "https://cdn.gamer-network.net/2019/metabomb/Dragonqueen_Alexstrasza_full.jpg",
+      "damage": 8,
+      "health": 8
+    }
+  ]
+}
