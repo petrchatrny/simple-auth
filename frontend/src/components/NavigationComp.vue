@@ -8,7 +8,7 @@
         <div class="logo">Epic dragons</div>
       </router-link>
     </div>
-    <div class="nav-group">
+    <div class="nav-group" v-if="!user">
       <router-link to="/login">
         <div class="login">Login</div>
       </router-link>
@@ -16,12 +16,28 @@
         <div class="register">Register</div>
       </router-link>
     </div>
+    <div class="nav-group" v-if="user">
+      <router-link to="/user">
+        <div class="login">{{ user.username }}</div>
+      </router-link>
+      <div @click="logout" class="register">Log out</div>
+    </div>
   </nav>
 </template>
 
 <script>
 export default {
-  name: "NavigationComp"
+  name: "NavigationComp",
+  methods: {
+    logout() {
+
+    }
+  },
+  computed: {
+    user() {
+      return this.$store.state.user
+    }
+  }
 }
 </script>
 
