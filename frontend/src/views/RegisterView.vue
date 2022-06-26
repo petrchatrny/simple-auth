@@ -43,7 +43,7 @@ export default {
       })
           .then(() => {
             this.$toast.success("Registration succeeded!", {position: "bottom-left", duration: 1000});
-            this.$router.push("/login")
+            this.$router.push("/login");
           })
           .catch((err) => {
             console.log(err);

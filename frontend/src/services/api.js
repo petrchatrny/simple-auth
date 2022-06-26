@@ -2,9 +2,9 @@ import axios from "axios";
 
 let baseUrl;
 if (process.env.NODE_ENV === "development") {
-    baseUrl = "http://localhost:3000/api"
+    baseUrl = "http://localhost:3000/api";
 } else {
-    baseUrl = process.env.BASE_URL + "api"
+    baseUrl = process.env.BASE_URL + "api";
 }
 
 const api = axios.create({
@@ -17,4 +17,4 @@ const api = axios.create({
     withCredentials: true
 });
 
-export default api
+export default api;

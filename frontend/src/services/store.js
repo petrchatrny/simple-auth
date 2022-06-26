@@ -1,4 +1,4 @@
-import {createStore} from "vuex"
+import {createStore} from "vuex";
 import Api from "@/services/api";
 
 const store = createStore({
@@ -9,13 +9,13 @@ const store = createStore({
     },
     mutations: {
         setUser(state, payload) {
-            state.user = payload
+            state.user = payload;
         },
         setUserIsLoggedIn(state, payload) {
-            state.userLoggedIn = payload
+            state.userLoggedIn = payload;
         },
         setIsStoreUpdated(state, payload) {
-            state.isStoreUpdated = payload
+            state.isStoreUpdated = payload;
         }
     },
     actions: {

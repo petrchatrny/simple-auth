@@ -68,17 +68,17 @@ const router = createRouter({
 router.beforeEach(async (to, from, next) => {
     // update store if needed
     if (!store.state.isStoreUpdated) {
-        await store.dispatch("updateStore")
+        await store.dispatch("updateStore");
     }
 
     // control routes
     const isAuthenticated = store.state.userLoggedIn;
     if (!isAuthenticated && to.meta.authRequired) {
-        next({name: "login"})
+        next({name: "login"});
     } else if (isAuthenticated && to.meta.authForbidden) {
-        next({name: "user"})
+        next({name: "user"});
     } else {
-        next()
+        next();
     }
 });
 

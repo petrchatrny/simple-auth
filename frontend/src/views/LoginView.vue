@@ -36,7 +36,7 @@ export default {
       try {
         await this.$store.dispatch("login", {email: this.email, password: this.password});
         if (this.isUserLoggedIn) {
-          this.$toast.success("Authentication succeeded.", {position: "bottom-left", duration: 1000})
+          this.$toast.success("Authentication succeeded.", {position: "bottom-left", duration: 1000});
           await this.$router.push("/dragons");
         }
       } catch (err) {
