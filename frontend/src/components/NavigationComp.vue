@@ -29,8 +29,17 @@
 export default {
   name: "NavigationComp",
   methods: {
-    logout() {
-
+    async logout() {
+      try {
+        await this.$store.dispatch("logout");
+        if (!this.isUserLoggedIn) {
+          this.$toast.success("Successfully logged out.", {position: "bottom-left", duration: 1000});
+          await this.$router.push("/login");
+        }
+      } catch (e) {
+        console.log(e);
+        this.$toast.error("Couldn't log out.", {position: "bottom-left", duration: 1000});
+      }
     }
   },
   computed: {

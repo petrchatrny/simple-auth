@@ -20,9 +20,7 @@ const store = createStore({
     },
     actions: {
         async login(context, {email, password}) {
-            const res = await Api.post("/users/login",
-                {email, password},
-                {withCredentials: true})
+            const res = await Api.post("/users/login", {email, password})
                 .catch((err) => {
                     throw new Error(err);
                 });
@@ -45,6 +43,16 @@ const store = createStore({
                 context.commit("setUserIsLoggedIn", false);
             } finally {
                 context.commit("setIsStoreUpdated", true);
+            }
+        },
+        async logout(context) {
+            const res = await Api.post("/users/logout")
+                .catch((err) => {
+                    throw new Error(err);
+                });
+            if (res) {
+                context.commit("setUser", null);
+                context.commit("setUserIsLoggedIn", false);
             }
         }
     }
